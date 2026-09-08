@@ -16,10 +16,8 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: pappalasairam/oci-webapp_oci-oke
-        command: ["/bin/sh", "-c"]
-        args:
-          - npm install && node app.js
+        image: docker.io/pappalasairam/oci-webapp_oci-oke:v1
+        imagePullPolicy: Always
         env:
         - name: DB_HOST
           value: postgres-service
