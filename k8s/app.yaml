@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: node:18-alpine
+        image: pappalasairam/oci-webapp_oci-oke
         command: ["/bin/sh", "-c"]
         args:
           - npm install && node app.js

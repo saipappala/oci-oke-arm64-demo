@@ -1,14 +1,12 @@
 {
-&quot;name&quot;: &quot;oci-oke-arm64-demo&quot;,
-&quot;version&quot;: &quot;1.0.0&quot;,
-&quot;description&quot;: &quot;Node.js PostgreSQL Demo for OCI OKE ARM64&quot;,
-&quot;main&quot;: &quot;app.js&quot;,
-&quot;scripts&quot;: {
-&quot;start&quot;: &quot;node app.js&quot;
-},
-&quot;dependencies&quot;: {
-
-&quot;express&quot;: &quot;^4.19.2&quot;,
-&quot;pg&quot;: &quot;^8.11.5&quot;
-}
+  "name": "k8s-pg-demo",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "pg": "^8.11.5"
+  }
 }
