@@ -1,0 +1,19 @@
+name: Deploy to OKE
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: [ self-hosted, oci-arm64 ]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Kubernetes
+        run: |
+          kubectl apply -f k8s/postgres.yaml
+          kubectl apply -f k8s/app.yaml
+          kubectl rollout status deployment/web-app-deployment
