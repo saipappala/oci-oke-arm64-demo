@@ -36,6 +36,10 @@ metadata:
   name: web-app-loadbalancer
   annotations:
     service.beta.kubernetes.io/oci-load-balancer-internal: "false"
+    service.beta.kubernetes.io/oci-load-balancer-subnet1: "ocid1.subnet.oc1.ap-hyderabad-1.aaaaaaaa4l6xji4r63c25q5to5etld7eghhqsrcorw5j5y5hfpwuuurtgh2q"
+    service.beta.kubernetes.io/oci-load-balancer-shape: "flexible"
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: "10"
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: "10"
 spec:
   type: LoadBalancer
   ports:
